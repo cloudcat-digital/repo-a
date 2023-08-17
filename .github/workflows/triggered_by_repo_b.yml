@@ -1,0 +1,15 @@
+name: Workflow Triggered by Repo B
+
+on:
+  workflow_run:
+    workflows: ["Hello World Workflow in Repo B"]
+    types:
+      - completed
+
+jobs:
+  respond_to_hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Response
+        run: echo "Hello, World from Repo A in response to Repo B!"
