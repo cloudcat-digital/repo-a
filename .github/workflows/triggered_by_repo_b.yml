@@ -1,10 +1,7 @@
 name: Workflow Triggered by Repo B
 
 on:
-  workflow_run:
-    workflows: ["Hello World Workflow in Repo B"]
-    types:
-      - completed
+  workflow_dispatch:
 
 jobs:
   respond_to_hello:
